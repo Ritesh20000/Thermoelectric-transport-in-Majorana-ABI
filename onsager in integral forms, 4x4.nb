@@ -1,0 +1,1007 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     40834,        999]
+NotebookOptionsPosition[     39630,        974]
+NotebookOutlinePosition[     40076,        991]
+CellTagsIndexPosition[     40033,        988]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"V2", " ", "=", " ", "0"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I1e", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"Grefdeoe", "*", " ", "V1"}], "  ", "-", " ", 
+      RowBox[{"Gdeue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Sdeue", "*", "T"}], " ", "-", " ", 
+      RowBox[{"Sdeie", "*", "TR"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I1h", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"Grefdhoe", "*", " ", "V1"}], "  ", "-", " ", 
+      RowBox[{"Gdhue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Sdhue", "*", "T"}], " ", "-", " ", 
+      RowBox[{"Sdhie", "*", "TR"}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2e", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gteoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Gteue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Steue", "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Steoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2h", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gthoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Gthue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Sthue", "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Sthoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I3e", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gdoeoe"}], "*", " ", "V1"}], "  ", "+", " ", 
+      RowBox[{"Grefdoeue", "*", "V3"}], " ", "-", 
+      RowBox[{"Sdoeoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "T"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Sdoeie", "*", 
+       RowBox[{"(", 
+        RowBox[{"TR", "-", "T"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I3h", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gdohoe"}], "*", " ", "V1"}], "  ", "+", " ", 
+      RowBox[{"Grefdohue", "*", "V3"}], " ", "-", 
+      RowBox[{"Sdohoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "T"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Sdohie", "*", 
+       RowBox[{"(", 
+        RowBox[{"TR", "-", "T"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I1qe", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"Srefdeoe", "*", " ", "V1"}], "  ", "-", " ", 
+      RowBox[{"Sdeue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Ldeue", "*", "T"}], " ", "-", " ", 
+      RowBox[{"Ldeie", "*", "TR"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I1qh", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"Srefdhoe", "*", " ", "V1"}], "  ", "-", " ", 
+      RowBox[{"Sdhue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Ldhue", "*", "T"}], " ", "-", " ", 
+      RowBox[{"Ldhie", "*", "TR"}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2qe", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Steoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Steue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Lteue", "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lteoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2qh", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Sthoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Sthue", "*", "V3"}], " ", "-", " ", 
+      RowBox[{"Lthue", "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lthoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I3qe", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Sdoeoe"}], "*", " ", "V1"}], "  ", "+", " ", 
+      RowBox[{"Srefdoeue", "*", "V3"}], " ", "-", 
+      RowBox[{"Ldoeoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "T"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Ldoeie", "*", 
+       RowBox[{"(", 
+        RowBox[{"TR", "-", "T"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I3qh", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Sdohoe"}], "*", " ", "V1"}], "  ", "+", " ", 
+      RowBox[{"Srefdohue", "*", "V3"}], " ", "-", 
+      RowBox[{"Ldohoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "T"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Ldohie", "*", 
+       RowBox[{"(", 
+        RowBox[{"TR", "-", "T"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"I3e", " ", "+", "I3h"}], " ", "\[Equal]", "0"}], " ", "&&", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"I3qe", " ", "+", " ", "I3qh"}], " ", "\[Equal]", " ", "0"}]}],
+      ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"V3", ",", "T"}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.877828639025812*^9, 3.877828640748829*^9}, {
+   3.8778286826037235`*^9, 3.877828764697522*^9}, {3.877828811716316*^9, 
+   3.8778288586929216`*^9}, 3.8778288982047553`*^9, {3.8778290946275187`*^9, 
+   3.8778291337353067`*^9}, {3.877829216414124*^9, 3.8778292262432575`*^9}, {
+   3.877829312549224*^9, 3.8778293737257237`*^9}, {3.8778294151618032`*^9, 
+   3.877829430512762*^9}, {3.8778300317401342`*^9, 3.8778300335612593`*^9}, {
+   3.8778301141445384`*^9, 3.8778301142926283`*^9}, {3.877832469976163*^9, 
+   3.87783247333011*^9}, {3.890304959757982*^9, 3.8903049930066013`*^9}, {
+   3.8903057777229524`*^9, 3.890305842417976*^9}, {3.890305931928424*^9, 
+   3.8903060228580804`*^9}, 3.8903065066135025`*^9, {3.8903622286702185`*^9, 
+   3.890362261146542*^9}, {3.890362452249653*^9, 3.8903624700008307`*^9}, {
+   3.8903625304906235`*^9, 3.8903625927146063`*^9}, {3.89036300284538*^9, 
+   3.8903630045559597`*^9}, {3.8903632273679123`*^9, 
+   3.8903633678246346`*^9}, {3.890363479829571*^9, 3.890363518307461*^9}, {
+   3.902971547071319*^9, 3.902971552108986*^9}, {3.902971660806843*^9, 
+   3.902971661719179*^9}},ExpressionUUID->"9ed984a0-ba6d-4ea5-bd0c-\
+19c68609d0b9"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.8778294328531537`*^9, 3.877830042463483*^9, 3.877830116877205*^9, 
+   3.877832474433937*^9, 3.8897655750744243`*^9, 3.890306034130781*^9, 
+   3.8903065091033*^9, {3.890363492726473*^9, 3.8903635223485107`*^9}},
+ CellLabel->
+  "Out[179]=",ExpressionUUID->"1565b477-9b66-430f-a39f-b272faa5779d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"V3", "\[Rule]", 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}],
+               ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Sdoeie"}], " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "TR"}], "-", 
+               RowBox[{"Gdoeoe", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "V1"}]}], ")"}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], 
+            ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "Ldoeie"}], " ", "TR"}], "-", 
+             RowBox[{"Ldohie", " ", "TR"}], "-", 
+             RowBox[{"Sdoeoe", " ", "V1"}], "-", 
+             RowBox[{"Sdohoe", " ", "V1"}]}], ")"}]}]}], ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Grefdoeue", "+", "Grefdohue"}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{"Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}],
+               ")"}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], 
+            ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"Srefdoeue", "+", "Srefdohue"}], ")"}]}]}], ")"}]}], 
+       ")"}]}]}], ",", 
+    RowBox[{"T", "\[Rule]", 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Grefdoeue", " ", "Ldoeie", " ", "TR"}], "+", 
+          RowBox[{"Grefdohue", " ", "Ldoeie", " ", "TR"}], "+", 
+          RowBox[{"Grefdoeue", " ", "Ldohie", " ", "TR"}], "+", 
+          RowBox[{"Grefdohue", " ", "Ldohie", " ", "TR"}], "-", 
+          RowBox[{"Sdoeie", " ", "Srefdoeue", " ", "TR"}], "-", 
+          RowBox[{"Sdohie", " ", "Srefdoeue", " ", "TR"}], "-", 
+          RowBox[{"Sdoeie", " ", "Srefdohue", " ", "TR"}], "-", 
+          RowBox[{"Sdohie", " ", "Srefdohue", " ", "TR"}], "+", 
+          RowBox[{"Grefdoeue", " ", "Sdoeoe", " ", "V1"}], "+", 
+          RowBox[{"Grefdohue", " ", "Sdoeoe", " ", "V1"}], "+", 
+          RowBox[{"Grefdoeue", " ", "Sdohoe", " ", "V1"}], "+", 
+          RowBox[{"Grefdohue", " ", "Sdohoe", " ", "V1"}], "-", 
+          RowBox[{"Gdoeoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+          RowBox[{"Gdohoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+          RowBox[{"Gdoeoe", " ", "Srefdohue", " ", "V1"}], "-", 
+          RowBox[{"Gdohoe", " ", "Srefdohue", " ", "V1"}]}], ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "Grefdoeue"}], " ", "Ldoeie"}], "-", 
+          RowBox[{"Grefdohue", " ", "Ldoeie"}], "-", 
+          RowBox[{"Grefdoeue", " ", "Ldoeoe"}], "-", 
+          RowBox[{"Grefdohue", " ", "Ldoeoe"}], "-", 
+          RowBox[{"Grefdoeue", " ", "Ldohie"}], "-", 
+          RowBox[{"Grefdohue", " ", "Ldohie"}], "-", 
+          RowBox[{"Grefdoeue", " ", "Ldohoe"}], "-", 
+          RowBox[{"Grefdohue", " ", "Ldohoe"}], "+", 
+          RowBox[{"Sdoeie", " ", "Srefdoeue"}], "+", 
+          RowBox[{"Sdoeoe", " ", "Srefdoeue"}], "+", 
+          RowBox[{"Sdohie", " ", "Srefdoeue"}], "+", 
+          RowBox[{"Sdohoe", " ", "Srefdoeue"}], "+", 
+          RowBox[{"Sdoeie", " ", "Srefdohue"}], "+", 
+          RowBox[{"Sdoeoe", " ", "Srefdohue"}], "+", 
+          RowBox[{"Sdohie", " ", "Srefdohue"}], "+", 
+          RowBox[{"Sdohoe", " ", "Srefdohue"}]}], ")"}]}], ")"}]}]}]}], "}"}],
+   "}"}]], "Output",
+ CellChangeTimes->{
+  3.8778294328531537`*^9, 3.877830042463483*^9, 3.877830116877205*^9, 
+   3.877832474433937*^9, 3.8897655750744243`*^9, 3.890306034130781*^9, 
+   3.8903065091033*^9, {3.890363492726473*^9, 3.8903635223894176`*^9}},
+ CellLabel->
+  "Out[192]=",ExpressionUUID->"a287b624-9934-470e-9d00-bd1008395624"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"I2e", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gteoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Gteue", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Sdoeie"}], " ", "TR"}], "-", 
+                  RowBox[{"Sdohie", " ", "TR"}], "-", 
+                  RowBox[{"Gdoeoe", " ", "V1"}], "-", 
+                  RowBox[{"Gdohoe", " ", "V1"}]}], ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Ldoeie"}], " ", "TR"}], "-", 
+                RowBox[{"Ldohie", " ", "TR"}], "-", 
+                RowBox[{"Sdoeoe", " ", "V1"}], "-", 
+                RowBox[{"Sdohoe", " ", "V1"}]}], ")"}]}]}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Grefdoeue", "+", "Grefdohue"}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{"Srefdoeue", "+", "Srefdohue"}], ")"}]}]}], ")"}]}], 
+          ")"}]}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Steue", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Grefdoeue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Ldohie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldohie", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdohue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdohue", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdohoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdohoe", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdohue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdohue", " ", "V1"}]}], ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Grefdoeue"}], " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohoe"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdohue"}]}], ")"}]}], ")"}]}], 
+          ")"}], "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Steoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2h", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Gthoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Gthue", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Sdoeie"}], " ", "TR"}], "-", 
+                  RowBox[{"Sdohie", " ", "TR"}], "-", 
+                  RowBox[{"Gdoeoe", " ", "V1"}], "-", 
+                  RowBox[{"Gdohoe", " ", "V1"}]}], ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Ldoeie"}], " ", "TR"}], "-", 
+                RowBox[{"Ldohie", " ", "TR"}], "-", 
+                RowBox[{"Sdoeoe", " ", "V1"}], "-", 
+                RowBox[{"Sdohoe", " ", "V1"}]}], ")"}]}]}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Grefdoeue", "+", "Grefdohue"}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{"Srefdoeue", "+", "Srefdohue"}], ")"}]}]}], ")"}]}], 
+          ")"}]}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Sthue", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Grefdoeue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Ldohie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldohie", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdohue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdohue", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdohoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdohoe", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdohue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdohue", " ", "V1"}]}], ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Grefdoeue"}], " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohoe"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdohue"}]}], ")"}]}], ")"}]}], 
+          ")"}], "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Sthoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2qe", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Steoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Steue", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Sdoeie"}], " ", "TR"}], "-", 
+                  RowBox[{"Sdohie", " ", "TR"}], "-", 
+                  RowBox[{"Gdoeoe", " ", "V1"}], "-", 
+                  RowBox[{"Gdohoe", " ", "V1"}]}], ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Ldoeie"}], " ", "TR"}], "-", 
+                RowBox[{"Ldohie", " ", "TR"}], "-", 
+                RowBox[{"Sdoeoe", " ", "V1"}], "-", 
+                RowBox[{"Sdohoe", " ", "V1"}]}], ")"}]}]}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Grefdoeue", "+", "Grefdohue"}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{"Srefdoeue", "+", "Srefdohue"}], ")"}]}]}], ")"}]}], 
+          ")"}]}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lteue", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Grefdoeue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Ldohie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldohie", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdohue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdohue", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdohoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdohoe", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdohue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdohue", " ", "V1"}]}], ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Grefdoeue"}], " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohoe"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdohue"}]}], ")"}]}], ")"}]}], 
+          ")"}], "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lteoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"I2qh", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Sthoe"}], "*", " ", "V1"}], " ", "-", " ", 
+      RowBox[{"Sthue", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "Sdoeie"}], " ", "TR"}], "-", 
+                  RowBox[{"Sdohie", " ", "TR"}], "-", 
+                  RowBox[{"Gdoeoe", " ", "V1"}], "-", 
+                  RowBox[{"Gdohoe", " ", "V1"}]}], ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "Ldoeie"}], " ", "TR"}], "-", 
+                RowBox[{"Ldohie", " ", "TR"}], "-", 
+                RowBox[{"Sdoeoe", " ", "V1"}], "-", 
+                RowBox[{"Sdohoe", " ", "V1"}]}], ")"}]}]}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Grefdoeue", "+", "Grefdohue"}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                 "Ldoeie", "+", "Ldoeoe", "+", "Ldohie", "+", "Ldohoe"}], 
+                 ")"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+               "Sdoeie", "+", "Sdoeoe", "+", "Sdohie", "+", "Sdohoe"}], ")"}],
+               " ", 
+              RowBox[{"(", 
+               RowBox[{"Srefdoeue", "+", "Srefdohue"}], ")"}]}]}], ")"}]}], 
+          ")"}]}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lthue", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Grefdoeue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldoeie", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Ldohie", " ", "TR"}], "+", 
+               RowBox[{"Grefdohue", " ", "Ldohie", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdoeue", " ", "TR"}], "-", 
+               RowBox[{"Sdoeie", " ", "Srefdohue", " ", "TR"}], "-", 
+               RowBox[{"Sdohie", " ", "Srefdohue", " ", "TR"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdoeoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdoeue", " ", "Sdohoe", " ", "V1"}], "+", 
+               RowBox[{"Grefdohue", " ", "Sdohoe", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdoeue", " ", "V1"}], "-", 
+               RowBox[{"Gdoeoe", " ", "Srefdohue", " ", "V1"}], "-", 
+               RowBox[{"Gdohoe", " ", "Srefdohue", " ", "V1"}]}], ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "Grefdoeue"}], " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldoeoe"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohie"}], "-", 
+               RowBox[{"Grefdoeue", " ", "Ldohoe"}], "-", 
+               RowBox[{"Grefdohue", " ", "Ldohoe"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdoeue"}], "+", 
+               RowBox[{"Sdoeie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdoeoe", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohie", " ", "Srefdohue"}], "+", 
+               RowBox[{"Sdohoe", " ", "Srefdohue"}]}], ")"}]}], ")"}]}], 
+          ")"}], "-", "TR"}], ")"}]}], " ", "-", " ", 
+      RowBox[{"Lthoe", "*", 
+       RowBox[{"(", 
+        RowBox[{"-", "TR"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.8903635428249965`*^9, 3.890363556035427*^9}, {
+  3.890363614572116*^9, 3.8903636159908094`*^9}, {3.8903670015444293`*^9, 
+  3.890367090698065*^9}, {3.89036713394853*^9, 
+  3.8903671714974113`*^9}},ExpressionUUID->"428df361-237d-4322-a206-\
+2efbcebb673f"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Gqe", " ", "=", " ", 
+     RowBox[{"Grefdeoe", " ", "-", 
+      RowBox[{"(", 
+       RowBox[{"Gdeue", "*", 
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+          RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Gqh", " ", "=", " ", 
+     RowBox[{"Grefdhoe", " ", "-", 
+      RowBox[{"(", 
+       RowBox[{"Gdhue", "*", 
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+          RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LqeT", " ", "=", "  ", 
+     RowBox[{
+      RowBox[{"-", "Sdeue"}], " ", "-", 
+      RowBox[{"Gdeue", "*", 
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+         RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LqhT", " ", "=", "  ", 
+     RowBox[{
+      RowBox[{"-", "Sdhue"}], " ", "-", 
+      RowBox[{"Gdhue", "*", 
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+         RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.877829757083521*^9, 3.8778298222413845`*^9}, {
+  3.8778300507318277`*^9, 3.877830059980627*^9}, {3.877830126719445*^9, 
+  3.877830135187436*^9}, {3.8778304865298853`*^9, 3.877830496246304*^9}, {
+  3.8778305429714966`*^9, 3.8778305490232916`*^9}, {3.877830609214371*^9, 
+  3.8778306121090317`*^9}, {3.877832457523431*^9, 3.877832492338824*^9}, {
+  3.88976577280591*^9, 3.889765774122332*^9}, {3.8897658073199925`*^9, 
+  3.8897658143710155`*^9}},ExpressionUUID->"f767652d-c973-475b-9e9b-\
+733f349224b3"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.877829869639101*^9, 3.87782991595623*^9}, 
+   3.877830025619309*^9, {3.87783008719317*^9, 3.87783009338439*^9}, {
+   3.8778304058987083`*^9, 3.8778304063605833`*^9}, {3.8778305092516427`*^9, 
+   3.877830541861333*^9}},ExpressionUUID->"4a354cac-843a-4f52-b42e-\
+021291e87fec"],
+
+Cell[BoxData[{
+ RowBox[{"I1qe", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Srefdeoe", "*", " ", "V1"}], " ", "-", " ", 
+   RowBox[{"Sdeie", "*", "V2"}], " ", "-", " ", 
+   RowBox[{"Sdeue", "*", "V3"}], " ", "-", " ", 
+   RowBox[{"Ldeue", "*", "T"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"I1qh", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Srefdhoe", "*", " ", "V1"}], " ", "-", " ", 
+    RowBox[{"Sdhie", "*", "V2"}], " ", "-", " ", 
+    RowBox[{"Sdhue", "*", "V3"}], " ", "-", " ", 
+    RowBox[{"Ldhue", "*", "T"}]}]}], "\[IndentingNewLine]", 
+  "\t"}], "\[IndentingNewLine]", 
+ RowBox[{"I3qe", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "Sdoeoe"}], "*", " ", "V1"}], " ", "-", " ", 
+   RowBox[{"Sdoeie", "*", "V2"}], " ", "+", " ", 
+   RowBox[{"Srefdoeue", "*", "V3"}], " ", "+", " ", 
+   RowBox[{"Lrefdoeue", "*", "T"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"I3qh", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "Sdohoe"}], "*", " ", "V1"}], " ", "-", " ", 
+    RowBox[{"Sdohie", "*", "V2"}], " ", "+", " ", 
+    RowBox[{"Srefdohue", "*", "V3"}], " ", "+", " ", 
+    RowBox[{"Lrefdohue", "*", "T"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ghe", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", "Sdoeoe"}], "+", 
+    RowBox[{"(", 
+     RowBox[{"Srefdoeue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ghh", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"-", "Sdohoe"}], " ", "+", 
+    RowBox[{"(", 
+     RowBox[{"Srefdohue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LheT", " ", "=", "  ", 
+   RowBox[{"Lrefdoeue", " ", "+", 
+    RowBox[{"Srefdoeue", "*", 
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+       RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LhhT", " ", "=", "  ", 
+   RowBox[{"Lrefdohue", " ", "+", " ", 
+    RowBox[{"Srefdohue", "*", 
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+       RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8778333135958414`*^9, 3.877833358828492*^9}, {
+   3.8778333979260798`*^9, 3.8778334204621077`*^9}, {3.8778334662513304`*^9, 
+   3.8778335195630407`*^9}, {3.889765839359046*^9, 3.8897659647204323`*^9}, {
+   3.889766027849416*^9, 3.889766029882625*^9}, {3.8897660757419033`*^9, 
+   3.889766077222526*^9}, 3.889767612245099*^9, {3.889880370478836*^9, 
+   3.8898803767966523`*^9}},ExpressionUUID->"ff836619-da2c-41b7-ad2a-\
+77e17409c3b3"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Onsager", " ", "coefficients", " ", "in", " ", "IV", " ", "matrix", " ", 
+    "in", " ", "terms", " ", "of", " ", "the", " ", "integral"}], "*)"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.877833541405739*^9, 
+  3.877833568393267*^9}},ExpressionUUID->"a57a41d7-f864-41a2-a127-\
+f327ab8f8747"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Gqe", " ", "=", " ", 
+   RowBox[{"Grefdeoe", " ", "-", 
+    RowBox[{"(", 
+     RowBox[{"Gdeue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Gqh", " ", "=", " ", 
+   RowBox[{"Grefdhoe", " ", "-", 
+    RowBox[{"(", 
+     RowBox[{"Gdhue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LqeT", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", "Sdeue"}], " ", "-", 
+    RowBox[{"Gdeue", "*", 
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+       RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LqhT", " ", "=", "  ", 
+    RowBox[{
+     RowBox[{"-", "Sdhue"}], " ", "-", 
+     RowBox[{"Gdhue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ghe", " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"-", "Sdoeoe"}], "+", 
+    RowBox[{"(", 
+     RowBox[{"Srefdoeue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ghh", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"-", "Sdohoe"}], " ", "+", 
+    RowBox[{"(", 
+     RowBox[{"Srefdohue", "*", 
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Gdoeoe", "+", "Gdohoe"}], 
+        RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LheT", " ", "=", "  ", 
+   RowBox[{"Lrefdoeue", " ", "+", 
+    RowBox[{"Srefdoeue", "*", 
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+       RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LhhT", " ", "=", "  ", 
+   RowBox[{"Lrefdohue", " ", "+", " ", 
+    RowBox[{"Srefdohue", "*", 
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Srefdoeue"}], "-", "Srefdohue"}], 
+       RowBox[{"Grefdoeue", "+", "Grefdohue"}]], ")"}]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.877833535461556*^9, 3.8778335383554544`*^9}, {
+   3.8897653708388147`*^9, 3.889765380840411*^9}, {3.8897654513968573`*^9, 
+   3.889765505313512*^9}, 3.8897658230096874`*^9, 3.8897659735153627`*^9, 
+   3.889766129656248*^9},ExpressionUUID->"38309299-a062-4b44-90c2-\
+a0faa2e92bc5"]
+},
+WindowSize->{1141.2, 580.1999999999999},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1. Inherited,
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b41bdd7a-315b-4c70-9f33-04999752bf97"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6511, 162, 497, "Input",ExpressionUUID->"9ed984a0-ba6d-4ea5-bd0c-19c68609d0b9"],
+Cell[7094, 186, 346, 6, 32, "Output",ExpressionUUID->"1565b477-9b66-430f-a39f-b272faa5779d"],
+Cell[7443, 194, 4226, 98, 170, "Output",ExpressionUUID->"a287b624-9934-470e-9d00-bd1008395624"]
+}, Open  ]],
+Cell[11684, 295, 19309, 433, 1375, "Input",ExpressionUUID->"428df361-237d-4322-a206-2efbcebb673f"],
+Cell[30996, 730, 1934, 52, 183, "Input",ExpressionUUID->"f767652d-c973-475b-9e9b-733f349224b3"],
+Cell[32933, 784, 324, 5, 28, "Input",ExpressionUUID->"4a354cac-843a-4f52-b42e-021291e87fec"],
+Cell[33260, 791, 2969, 79, 301, "Input",ExpressionUUID->"ff836619-da2c-41b7-ad2a-77e17409c3b3"],
+Cell[36232, 872, 437, 9, 107, "Input",ExpressionUUID->"a57a41d7-f864-41a2-a127-f327ab8f8747"],
+Cell[36672, 883, 2954, 89, 356, "Input",ExpressionUUID->"38309299-a062-4b44-90c2-a0faa2e92bc5"]
+}
+]
+*)
+
